@@ -10,18 +10,18 @@ export const metadata: Metadata = {
 
 export default function HizmetlerPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
       <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
         Hizmetler
       </p>
-      <h1 className="mt-3 font-display text-4xl tracking-tight text-forest sm:text-5xl">
+      <h1 className="mt-3 font-display text-3xl tracking-tight text-forest sm:text-4xl lg:text-5xl">
         Kayseri&apos;de güvenlik filesi çözümleri
       </h1>
-      <p className="mt-4 max-w-2xl text-muted">
+      <p className="mt-4 max-w-2xl text-sm text-muted sm:text-base">
         Her file aynı işi görmez. Aşağıdan ihtiyacınıza bakın; keşifte malzeme
         ve montaj şeklini yerinde netleştiririz.
       </p>
-      <div className="mt-12 grid gap-5 md:grid-cols-2">
+      <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-5 md:grid-cols-2">
         {services.map((item) => (
           <ServiceCard
             key={item.slug}

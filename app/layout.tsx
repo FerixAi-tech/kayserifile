@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -6,6 +6,13 @@ import { JsonLd } from "@/components/JsonLd";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site } from "@/lib/site";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#14352c",
+};
 
 const manrope = Manrope({
   variable: "--font-manrope",

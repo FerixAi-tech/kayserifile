@@ -37,19 +37,19 @@ export default async function ServicePage({
   if (!service) notFound();
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
-      <Link href="/hizmetler" className="text-sm text-moss hover:text-gold">
+    <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
+      <Link href="/hizmetler" className="inline-flex min-h-10 items-center text-sm text-moss hover:text-gold">
         ← Tüm hizmetler
       </Link>
-      <p className="mt-6 text-xs font-semibold uppercase tracking-[0.24em] text-moss">
+      <p className="mt-5 text-xs font-semibold uppercase tracking-[0.24em] text-moss sm:mt-6">
         Kayseri file montajı
       </p>
-      <h1 className="mt-3 font-display text-4xl tracking-tight text-forest sm:text-5xl">
+      <h1 className="mt-3 font-display text-3xl tracking-tight text-forest sm:text-4xl lg:text-5xl">
         {service.title}
       </h1>
-      <p className="mt-4 text-lg text-muted">{service.summary}</p>
+      <p className="mt-4 text-base text-muted sm:text-lg">{service.summary}</p>
       {service.image ? (
-        <div className="relative mt-8 aspect-[16/10] overflow-hidden rounded-3xl border border-line bg-sand">
+        <div className="relative mt-6 aspect-[16/10] overflow-hidden rounded-2xl border border-line bg-sand sm:mt-8 sm:rounded-3xl">
           <Image
             src={service.image}
             alt={service.title}
@@ -80,14 +80,14 @@ export default async function ServicePage({
           </li>
         ))}
       </ul>
-      <div className="mt-12 rounded-3xl bg-forest px-6 py-8 text-paper">
-        <h2 className="font-display text-2xl">Bu iş için keşif isteyin</h2>
+      <div className="mt-10 rounded-2xl bg-forest px-5 py-7 text-paper sm:mt-12 sm:rounded-3xl sm:px-6 sm:py-8">
+        <h2 className="font-display text-xl sm:text-2xl">Bu iş için keşif isteyin</h2>
         <p className="mt-2 text-sm text-paper/70">
           Fotoğraf ve adres yeterli. Kayseri içi keşif ücretsizdir.
         </p>
         <a
           href={whatsappLink(`${service.title} için keşif ve fiyat istiyorum.`)}
-          className="mt-5 inline-flex rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-ink"
+          className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-gold px-5 py-3 text-sm font-semibold text-ink sm:w-auto"
         >
           WhatsApp ile yaz
         </a>

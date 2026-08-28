@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 
 export default function HakkimizdaPage() {
   return (
-    <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
       <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
         Hakkımızda
       </p>
-      <h1 className="mt-3 font-display text-4xl tracking-tight text-forest sm:text-5xl">
+      <h1 className="mt-3 font-display text-3xl tracking-tight text-forest sm:text-4xl lg:text-5xl">
         Kayseri&apos;de file işini ciddiye alan bir ekip.
       </h1>
-      <div className="mt-8 space-y-5 text-base leading-relaxed text-ink/85">
+      <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-ink/85 sm:mt-8 sm:text-base">
         <p>
           {site.name}, Kayseri&apos;de güvenlik filesi montajı yapan yerel bir
           ekiptir. İşimiz balkon filesi, kuş filesi, halı saha filesi, inşaat

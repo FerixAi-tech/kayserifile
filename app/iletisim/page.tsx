@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 export default function IletisimPage() {
   return (
-    <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
+    <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:gap-10 sm:px-6 sm:py-16 lg:grid-cols-2">
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-moss">
           İletişim
         </p>
-        <h1 className="mt-3 font-display text-4xl tracking-tight text-forest sm:text-5xl">
+        <h1 className="mt-3 font-display text-3xl tracking-tight text-forest sm:text-4xl lg:text-5xl">
           Keşif için yazın, yerinde bakalım.
         </h1>
         <p className="mt-4 max-w-md text-muted">

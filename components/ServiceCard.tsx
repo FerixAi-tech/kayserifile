@@ -31,12 +31,12 @@ export function ServiceCard({
       ) : (
         <div className="h-2 w-full" style={{ background: item.accent }} />
       )}
-      <div className="p-6">
+      <div className="p-5 sm:p-6">
         <span
           className="inline-block h-2 w-10 rounded-full"
           style={{ background: item.accent }}
         />
-        <TitleTag className="mt-4 font-display text-2xl text-forest">
+        <TitleTag className="mt-3 font-display text-xl text-forest sm:mt-4 sm:text-2xl">
           {item.title}
         </TitleTag>
         <p className="mt-2 text-sm leading-relaxed text-muted">{item.summary}</p>
