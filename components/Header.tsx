@@ -33,7 +33,7 @@ export function Header() {
             href={whatsappLink()}
             className="rounded-full bg-gold px-4 py-2 text-sm font-semibold text-ink transition hover:bg-gold-soft"
           >
-            Ücretsiz keşif
+            Ücretsiz fiyat teklifi alın
           </a>
         </div>
         <button
@@ -67,7 +67,7 @@ export function Header() {
               href={whatsappLink()}
               className="mt-2 rounded-full bg-gold px-4 py-2 text-center font-semibold text-ink"
             >
-              Ücretsiz keşif
+              Ücretsiz fiyat teklifi alın
             </a>
           </nav>
         </div>

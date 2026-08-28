@@ -35,7 +35,7 @@ export default function Home() {
                 href={whatsappLink()}
                 className="rounded-full bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-gold-soft"
               >
-                Ücretsiz keşif iste
+                Ücretsiz fiyat teklifi alın
               </a>
               <Link
                 href="/hizmetler"
