@@ -8,12 +8,15 @@ export function JsonLd() {
     description: site.description,
     url: site.url,
     areaServed: site.city,
-    telephone: site.phoneDisplay || undefined,
+    telephone: `+90${site.phoneDisplay.replace(/\D/g, "").replace(/^0/, "")}`,
     email: site.email,
     address: {
       "@type": "PostalAddress",
-      addressLocality: site.city,
-      addressCountry: "TR",
+      streetAddress: site.address.street,
+      postalCode: site.address.postalCode,
+      addressLocality: site.address.district,
+      addressRegion: site.address.city,
+      addressCountry: site.address.country,
     },
     priceRange: "₺₺",
   };

@@ -25,28 +25,39 @@ export default function IletisimPage() {
         <ul className="mt-8 space-y-4 text-sm">
           <li className="rounded-2xl border border-line bg-white px-5 py-4">
             <p className="text-xs uppercase tracking-[0.18em] text-muted">
-              WhatsApp
+              Telefon / WhatsApp
             </p>
             <a
-              href={whatsappLink()}
+              href={telLink()}
               className="mt-1 block font-semibold text-forest hover:text-gold"
             >
-              Hemen mesaj gönder
+              {site.phoneDisplay}
+            </a>
+            <a
+              href={whatsappLink()}
+              className="mt-2 inline-block text-sm font-medium text-moss hover:text-gold"
+            >
+              WhatsApp ile yaz →
             </a>
           </li>
-          {site.phoneDisplay ? (
-            <li className="rounded-2xl border border-line bg-white px-5 py-4">
-              <p className="text-xs uppercase tracking-[0.18em] text-muted">
-                Telefon
-              </p>
-              <a
-                href={telLink()}
-                className="mt-1 block font-semibold text-forest"
-              >
-                {site.phoneDisplay}
-              </a>
-            </li>
-          ) : null}
+          <li className="rounded-2xl border border-line bg-white px-5 py-4">
+            <p className="text-xs uppercase tracking-[0.18em] text-muted">
+              Adres
+            </p>
+            <p className="mt-1 font-semibold leading-relaxed text-forest">
+              {site.address.street}
+              <br />
+              {site.address.postalCode} {site.address.district}/{site.address.city}
+            </p>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(site.addressDisplay)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm font-medium text-moss hover:text-gold"
+            >
+              Haritada aç →
+            </a>
+          </li>
           <li className="rounded-2xl border border-line bg-white px-5 py-4">
             <p className="text-xs uppercase tracking-[0.18em] text-muted">
               E-posta

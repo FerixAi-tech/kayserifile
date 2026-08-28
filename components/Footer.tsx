@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
-import { nav, services, site, whatsappLink } from "@/lib/site";
+import { nav, services, site, telLink, whatsappLink } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -11,6 +11,13 @@ export function Footer() {
           <p className="mt-4 max-w-md text-sm leading-relaxed text-paper/70">
             {site.city}&apos;de balkon filesi, kuş filesi, halı saha filesi ve
             inşaat filesi montajı. Ölçü yerinde, iş temiz, file gergin.
+          </p>
+          <p className="mt-4 text-sm text-paper/80">
+            <a href={telLink()} className="font-semibold text-gold-soft hover:text-gold">
+              {site.phoneDisplay}
+            </a>
+            <br />
+            <span className="text-paper/60">{site.addressDisplay}</span>
           </p>
           <a
             href={whatsappLink()}

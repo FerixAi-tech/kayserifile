@@ -7,9 +7,19 @@ export const site = {
   url: "https://kayserifile.vercel.app",
   city: "Kayseri",
   region: "Kayseri ve çevre iller",
-  phoneDisplay: process.env.NEXT_PUBLIC_PHONE ?? "",
-  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "",
+  phoneDisplay: process.env.NEXT_PUBLIC_PHONE ?? "0554 964 67 41",
+  whatsapp: process.env.NEXT_PUBLIC_WHATSAPP ?? "905549646741",
   email: process.env.NEXT_PUBLIC_EMAIL ?? "info@kayserifile.com",
+  address: {
+    street: "Osmangazi, 54. Sk. No:29",
+    postalCode: "38100",
+    district: "Kocasinan",
+    city: "Kayseri",
+    country: "TR",
+  },
+  get addressDisplay() {
+    return `${this.address.street} ${this.address.postalCode} ${this.address.district}/${this.address.city}`;
+  },
 };
 
 export function whatsappLink(message?: string) {
