@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { ServiceCard } from "@/components/ServiceCard";
 import {
   districts,
   faqs,
@@ -74,22 +76,33 @@ export default function Home() {
               <p className="text-xs uppercase tracking-[0.22em] text-gold-soft">
                 Ne takıyoruz
               </p>
-              <ul className="mt-6 space-y-4">
+              <ul className="mt-6 space-y-3">
                 {services.slice(0, 4).map((item) => (
                   <li key={item.slug}>
                     <Link
                       href={`/hizmetler/${item.slug}`}
-                      className="group flex items-start justify-between gap-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition hover:border-gold/40 hover:bg-white/10"
+                      className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-2.5 transition hover:border-gold/40 hover:bg-white/10"
                     >
-                      <span>
+                      {item.image ? (
+                        <span className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl">
+                          <Image
+                            src={item.image}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            sizes="56px"
+                          />
+                        </span>
+                      ) : null}
+                      <span className="min-w-0 flex-1">
                         <span className="block font-medium text-paper">
                           {item.title}
                         </span>
-                        <span className="mt-1 block text-sm text-paper/60">
+                        <span className="mt-0.5 block truncate text-sm text-paper/60">
                           {item.short}
                         </span>
                       </span>
-                      <span className="mt-1 text-gold-soft transition group-hover:translate-x-0.5">
+                      <span className="pr-1 text-gold-soft transition group-hover:translate-x-0.5">
                         →
                       </span>
                     </Link>
@@ -128,25 +141,7 @@ export default function Home() {
         </div>
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((item) => (
-            <Link
-              key={item.slug}
-              href={`/hizmetler/${item.slug}`}
-              className="group rounded-3xl border border-line bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-gold/40 hover:shadow-md"
-            >
-              <span
-                className="inline-block h-2 w-10 rounded-full"
-                style={{ background: item.accent }}
-              />
-              <h3 className="mt-4 font-display text-2xl text-forest">
-                {item.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">
-                {item.summary}
-              </p>
-              <span className="mt-5 inline-block text-sm font-semibold text-moss group-hover:text-gold">
-                Detay →
-              </span>
-            </Link>
+            <ServiceCard key={item.slug} item={item} />
           ))}
         </div>
       </section>

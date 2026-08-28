@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -23,25 +23,12 @@ export default function HizmetlerPage() {
       </p>
       <div className="mt-12 grid gap-5 md:grid-cols-2">
         {services.map((item) => (
-          <Link
+          <ServiceCard
             key={item.slug}
-            href={`/hizmetler/${item.slug}`}
-            className="rounded-3xl border border-line bg-white p-7 shadow-sm transition hover:border-gold/40"
-          >
-            <span
-              className="inline-block h-2 w-10 rounded-full"
-              style={{ background: item.accent }}
-            />
-            <h2 className="mt-4 font-display text-2xl text-forest">
-              {item.title}
-            </h2>
-            <p className="mt-2 text-sm text-muted">{item.summary}</p>
-            <ul className="mt-4 space-y-1 text-sm text-forest/80">
-              {item.points.map((point) => (
-                <li key={point}>· {point}</li>
-              ))}
-            </ul>
-          </Link>
+            item={item}
+            showPoints
+            headingLevel={2}
+          />
         ))}
       </div>
     </div>

@@ -37,6 +37,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Original uploads kept at repo root (served copies live in /public/images)
+/*.webp
+/*.jfif
+/*.jpg
+/*.jpeg
+/*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

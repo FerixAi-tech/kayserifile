@@ -48,6 +48,7 @@ export type Service = {
   short: string;
   summary: string;
   accent: string;
+  image?: string;
   points: string[];
   body: string[];
 };
@@ -60,6 +61,7 @@ export const services: Service[] = [
     summary:
       "Kayseri'deki daire ve villalarda balkon korkuluklarına UV dayanımlı güvenlik filesi montajı.",
     accent: "#c9a227",
+    image: "/images/balkon-filesi.webp",
     points: [
       "Çocuk ve kedi güvenliği",
       "Şeffaf görünüm, manzarayı kapatmaz",
@@ -79,6 +81,7 @@ export const services: Service[] = [
     summary:
       "Kuş pisliği, tüy ve yuva sorununu durduran ince gözlü kuş filesi uygulaması.",
     accent: "#4f9d7a",
+    image: "/images/kus-filesi.jpg",
     points: [
       "Güvercin ve serçe engeli",
       "İnce göz, görünmez duruş",
@@ -98,6 +101,7 @@ export const services: Service[] = [
     summary:
       "Halı saha, tenis kortu ve spor tesisi çevre filesi; direk, gerdirme ve kapı detayıyla.",
     accent: "#2f6b4f",
+    image: "/images/halisaha-filesi.jpg",
     points: [
       "Yüksek darbe dayanımı",
       "UV ve hava koşullarına uygun",
@@ -117,6 +121,7 @@ export const services: Service[] = [
     summary:
       "İnşaat filesi ve moloz filesi ile şantiye cephesi, iskele ve çevre emniyeti.",
     accent: "#c45c26",
+    image: "/images/insaat-filesi.webp",
     points: [
       "Moloz ve malzeme düşme önlemi",
       "İskele ve cephe kapatma",

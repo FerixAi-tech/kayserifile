@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getService, services, whatsappLink } from "@/lib/site";
@@ -18,6 +19,11 @@ export async function generateMetadata({
   return {
     title: service.title,
     description: service.summary,
+    openGraph: service.image
+      ? {
+          images: [{ url: service.image }],
+        }
+      : undefined,
   };
 }
 
@@ -42,10 +48,23 @@ export default async function ServicePage({
         {service.title}
       </h1>
       <p className="mt-4 text-lg text-muted">{service.summary}</p>
-      <div
-        className="mt-8 h-2 w-16 rounded-full"
-        style={{ background: service.accent }}
-      />
+      {service.image ? (
+        <div className="relative mt-8 aspect-[16/10] overflow-hidden rounded-3xl border border-line bg-sand">
+          <Image
+            src={service.image}
+            alt={service.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
+        </div>
+      ) : (
+        <div
+          className="mt-8 h-2 w-16 rounded-full"
+          style={{ background: service.accent }}
+        />
+      )}
       <div className="mt-10 space-y-5 text-base leading-relaxed text-ink/85">
         {service.body.map((p) => (
           <p key={p}>{p}</p>
