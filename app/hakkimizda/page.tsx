@@ -19,7 +19,7 @@ export default function HakkimizdaPage() {
         <p>
           {site.name}, Kayseri&apos;de güvenlik filesi montajı yapan yerel bir
           ekiptir. İşimiz balkon filesi, kuş filesi, halı saha filesi, inşaat
-          filesi, merdiven boşluğu ve çatı-cephe uygulamalarıdır.
+          filesi ve merdiven boşluğu uygulamalarıdır.
         </p>
         <p>
           File satışı tek başına yetmez. Ölçü yanlışsa kenar boş kalır; gergi

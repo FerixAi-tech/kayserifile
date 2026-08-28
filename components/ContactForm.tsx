@@ -64,7 +64,6 @@ export function ContactForm() {
             <option>Halı saha filesi</option>
             <option>İnşaat filesi</option>
             <option>Merdiven boşluğu filesi</option>
-            <option>Çatı / cephe filesi</option>
           </select>
         </label>
         <label className="grid gap-1 text-sm">

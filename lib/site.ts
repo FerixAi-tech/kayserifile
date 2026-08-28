@@ -141,6 +141,7 @@ export const services: Service[] = [
     summary:
       "Site ve apartman merdiven kovasına yatay veya düşey güvenlik filesi.",
     accent: "#6b7c8a",
+    image: "/images/merdiven-filesi.jpg",
     points: [
       "Merdiven kovası kapatma",
       "Çocuk güvenliği",
@@ -151,25 +152,6 @@ export const services: Service[] = [
       "Merdiven boşluğu filesi, apartman kovasına düşme riskini kapatır. Özellikle çocuklu binalarda ve yüksek katlı sitelerde yönetimlerin en sık talep ettiği uygulamadır.",
       "Boşluğun genişliği, kat yüksekliği ve mevcut demir doğramaya göre yatay kat filesi veya düşey kapatma tercih edilir. Bağlantılar duvar dübeli veya demir konstrüksiyonla yapılır.",
       "Kayseri'deki sitelerde keşfi ücretsiz yapıp, yönetim ve kat maliklerine net teklif bırakıyoruz.",
-    ],
-  },
-  {
-    slug: "cati-filesi",
-    title: "Çatı ve Cephe Filesi",
-    short: "Çatı, avlu ve açık cephelerde kuş, top ve düşme koruması.",
-    summary:
-      "Çatı arası, ışık bacası, avlu üstü ve açık cephe file sistemleri.",
-    accent: "#8a6a3d",
-    points: [
-      "Avlu ve ışık bacası kapatma",
-      "Çatı kuş engeli",
-      "Cephe düşme koruması",
-      "Özel ölçü ve gerdirme",
-    ],
-    body: [
-      "Çatı ve cephe filesi, standart balkon işinden daha özel ölçü ister. Rüzgâr yükü, erişim ve ankraj noktaları keşifte belirlenir.",
-      "Kayseri'de avlu üstü kapatma, çatı kuş filesi ve açık cephe koruma işlerinde fileyi hem gergin hem sökülebilir bakıma uygun kuruyoruz.",
-      "Yüksek işlerde güvenlik önlemleri alınır; montaj ekibi emniyet kemeri ve uygun ekipmanla çalışır.",
     ],
   },
 ];

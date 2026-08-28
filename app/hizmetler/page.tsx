@@ -5,7 +5,7 @@ import { services } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Hizmetler",
   description:
-    "Kayseri'de balkon filesi, kuş filesi, halı saha filesi, inşaat filesi, merdiven boşluğu ve çatı filesi montajı.",
+    "Kayseri'de balkon filesi, kuş filesi, halı saha filesi, inşaat filesi ve merdiven boşluğu filesi montajı.",
 };
 
 export default function HizmetlerPage() {
